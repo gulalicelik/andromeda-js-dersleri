@@ -8,17 +8,17 @@
 // divin tam ortasına "Merhaba yazsın" bu yazının rengi siyah olsun
 // butona tıklandığında bu yazı güle güle olsun ve yazı rengi beyaz olsun.
 
-const handleClick = () => {
+// const handleClick = () => {
     // const myContainer = document.querySelector('.container');
     // const myContainer = document.querySelector('#square');
-    const myContainer = document.getElementById('square');
-    const myBilmemNe = document.getElementById('bilmemne');
-    myContainer.style.width = '300px';
-    myContainer.style.height = '300px';
-    myContainer.style.backgroundColor = 'blue';
-    myBilmemNe.style.color = 'white';
-    myBilmemNe.innerText = 'Güle Güle';
-}
+    // const myContainer = document.getElementById('square');
+    // const myBilmemNe = document.getElementById('bilmemne');
+    // myContainer.style.width = '300px';
+    // myContainer.style.height = '300px';
+    // myContainer.style.backgroundColor = 'blue';
+    // myBilmemNe.style.color = 'white';
+    // myBilmemNe.innerText = 'Güle Güle';
+// }
 
 // task 2
 
@@ -46,18 +46,18 @@ const handleClick = () => {
 // butona basıldığında inp tek iuta girilen sayıse ekranın arkaplan rengi kırmızı olmalı
 // çift ise mavi olmalı
 
-const body = document.querySelector('body');
-const handleOddEvenCheck = () => {
-    // console.log('handleOddEvenCheck');
-    let myNumber = document.getElementById('numberArea').value;
-    console.log(myNumber)
-    myNumber = parseInt(myNumber);
-    if(myNumber % 2 === 0) {
-       body.style.backgroundColor = 'blue';
-    }else {
-        body.style.backgroundColor = 'red';
-    }
-}
+// const body = document.querySelector('body');
+// const handleOddEvenCheck = () => {
+//     console.log('handleOddEvenCheck');
+    // let myNumber = document.getElementById('numberArea').value;
+    // console.log(myNumber)
+    // myNumber = parseInt(myNumber);
+    // if(myNumber % 2 === 0) {
+    //    body.style.backgroundColor = 'blue';
+    // }else {
+    //     body.style.backgroundColor = 'red';
+    // }
+// }
 
 
 
@@ -67,6 +67,31 @@ const handleOddEvenCheck = () => {
 // 4 işlem yapabilmelidir
 // ekranda iki adet input olacak
 // inputların arasında select  option olacak (+ - * /)
-// altında bir buton olacak ve butona tıklandığındaü
+// altında bir buton olacak ve butona tıklandığında
 // inputlardaki sayılar ve selectteki işlemi yapacak ve sonucu ekranda gösterecek
 
+const calculate = () => {
+   const num1 = parseFloat(document.getElementById('num1').value);
+   const num2 = parseFloat(document.getElementById('num2').value);
+   const operator = document.getElementById('operator').value;
+   const sonucEkran = document.getElementById('sonuc');
+   let result = 0;
+   switch (operator) {
+         case '+':
+             result = num1 + num2;
+              break;
+         case '-':
+             result = num1 - num2;
+              break;
+         case '*':
+             result = num1 * num2;
+              break;
+         case '/':
+             result = num1 / num2;
+              break;
+         default:
+             result = 'Hatalı işlem veya işlem seçin';
+              break;
+   }
+    sonucEkran.innerText = `Sonuç: ${result}`;
+}

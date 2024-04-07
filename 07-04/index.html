@@ -22,9 +22,21 @@
 <!--</form>-->
 <!--<br>-->
 <!--<span id="result"></span>-->
-<input id="numberArea" type="number" placeholder="Bir sayı giriniz">
-<button  onclick="handleOddEvenCheck()">Kontrol et</button>
+<!--<input id="numberArea" type="number" placeholder="Bir sayı giriniz">-->
+<!--<button  onclick="handleOddEvenCheck()">Kontrol et</button>-->
 
+<input type="number" id="num1">
+<select id="operator">
+    <option value="" disabled selected>Seçim yapınız</option>
+    <option value="+">Topla (+)</option>
+    <option value="-">Çıkar (-)</option>
+    <option value="*">Çarp (*)</option>
+    <option value="/">Böl (/)</option>
+</select>
+<input type="number" id="num2">
+<br>
+<button id="calculateButton" type="submit" onclick="calculate()">Calculate</button>
+<p id="sonuc">Sonuç:</p>
 
 <script src="app.js"></script>
 </body>
