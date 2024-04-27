@@ -1,3 +1,9 @@
+/*body{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 100vh;*/
+/*}*/
 .ali{
     width: 100px;
     height: 100px;
@@ -6,3 +12,9 @@
 /*.ali:hover{*/
 /*    background-color: blue;*/
 /*}*/
+
+.location{
+    position: absolute;
+    font-size: 44px;
+    transition: top 200ms, left 200ms;
+}
