@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    background-color: orangered;
+    color: white;
+    border: 1px solid black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 44px;
+}
+
+/*.item{*/
+/*    height: 100px;*/
+/*    display: inline-block;*/
+/*    font-size: 50px;*/
+/*    color:white;*/
+/*}*/
+
+/*@media only screen and (max-width: 479px) {*/
+/*    .item{*/
+/*        width: 450px;*/
+/*        background-color: yellow;*/
+/*    }*/
+/*}*/
+
+/*@media only screen and (min-width: 480px) {*/
+/*    .item{*/
+/*        width: 450px;*/
+/*        background-color: blue;*/
+/*    }*/
+/*}*/
+
+/*@media only screen and (min-width: 768px) {*/
+/*    .item{*/
+/*        width: 600px;*/
+/*        background-color: green;*/
+/*    }*/
+
+/*}*/
+
+
+/*@media only screen and (min-width: 992px) {*/
+/*    .item{*/
+/*        width: 300px;*/
+/*        background-color: black;*/
+/*    }*/
+/*}*/
+
+
+/*@media only screen and (min-width: 1280px) {*/
+/*    .item{*/
+/*        width: 400px;*/
+/*        background-color: orangered;*/
+/*    }*/
+/*}*/
