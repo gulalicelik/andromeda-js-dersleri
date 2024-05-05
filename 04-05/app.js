@@ -136,41 +136,41 @@
 // console.log(myTimePromise);
 
 // FETCH API
-const myContainer  = document.querySelector(".container");
+const myContainer = document.querySelector(".container");
 
 fetch("https://jsonplaceholder.typicode.com/users")
     .then(response => response.json())
     .then(data => {
-         data.forEach(user => {
-                const div = document.createElement("div");
-                div.style.backgroundColor = "blue";
-                div.style.color = "white";
-                div.style.margin = "5px";
-                div.style.padding = "5px";
-                div.innerText = user.name;
-                myContainer.appendChild(div);
-          });
+        data.forEach(user => {
+            // const div = document.createElement("div");
+            // div.style.backgroundColor = "blue";
+            // div.style.color = "white";
+            // div.style.margin = "5px";
+            // div.style.padding = "5px";
+            // div.innerText = user.name;
+            // myContainer.appendChild(div);
+
+            // innerHTML
+
+            myContainer.innerHTML += `<div style="background-color: blue; color: white; margin: 5px; padding: 5px;">
+${user.name}
+</div>`;
+        });
     })
     .catch(error => {
         console.log(error);
     }).finally(() => {
-        console.log("Ben her zaman çalışırım");
-    });
+    console.log("Ben her zaman çalışırım");
+});
 
 
-//  HTTP REQUEST METHODS (Hyper text transfer protokol)
+//  HTTP REQUEST METHODS (Hyper text transfer protocol)
 
 // GET  (READ)
 // POST (CREATE)
 // PUT (UPDATE)
 // PATCH (UPDATE)
 // DELETE (DELETE)
-
-
-fetch('http://hasanadiguzel.com.tr/api/kurgetir')
-    .then(response => response.json())
-    .then(data => console.log(data.TCMB_AnlikKurBilgileri));
-
 
 
 
